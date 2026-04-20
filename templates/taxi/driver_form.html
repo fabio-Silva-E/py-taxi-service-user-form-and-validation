@@ -2,7 +2,9 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  <h1>Update Driver License</h1>
+  <h1>
+  {{ object|yesno:"Update Driver License,Create Driver" }}
+  </h1>
 
   <form method="post">
     {% csrf_token %}
